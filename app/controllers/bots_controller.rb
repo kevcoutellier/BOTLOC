@@ -1,7 +1,7 @@
 class BotsController < ApplicationController
   before_action :set_bot, only: [:show]
   def index
-    @bots = Bots.all
+    @bots = Bot.all
   end
 
   def new
@@ -11,7 +11,7 @@ class BotsController < ApplicationController
   def create
     @bot = Bot.new(params_bot)
     if @bot.save
-      redirect_to bot_path(@bot)
+      redirect_to bots_path(@bot)
     else
       render :new, status: :unprocessable_entity
     end

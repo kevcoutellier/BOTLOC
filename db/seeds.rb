@@ -8,11 +8,12 @@
 
 
 
-Puts "Deleting all...."
-Bot.destroy_all
 
-Puts "Creating bots...."
+# Bot.destroy_all
+# User.destroy_all
 
-Bot.create(name: "Rocky", description: "Lorem ipsum", price: "5", rating: 1)
-Bot.create(name: "Bob", description: "Lorem ipsum", price: "4", rating: 4 )
-Bot.create(name: "Pierre", description: "Lorem ipsum", price: "3", rating: 1)
+# user = User.create!(email: "kev.coutellier@gmail.com", password: "password", owner: "false")
+
+Bot.create!(name: "Rocky", description: "Lorem ipsum", price: 5, rating: 1, user_id: 2)
+# Bot.create!(name: "Bob", description: "Lorem ipsum", price: "4", rating: 4 )
+# Bot.create!(name: "Pierre", description: "Lorem ipsum", price: "3", rating: 1)

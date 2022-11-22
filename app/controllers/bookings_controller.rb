@@ -4,15 +4,14 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @bot = Bot.find(params [:bot_id])
+    @bot = Bot.find(params([:bot_id]))
     @booking = Booking.new(booking_params)
     @booking.bot = @bot
     @booking.user = current_user
-  if
-      @booking.save
+    if @booking.save
       redirect_to booking_path(@booking)
-  else
+    else
       redirect_to bot_path(@bot)
+    end
   end
-end
 end

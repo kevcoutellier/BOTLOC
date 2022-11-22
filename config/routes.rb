@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'bookings/new'
-  get 'bookings/create'
-  get 'bots/index'
-  get 'bots/new'
-  get 'bots/create'
-  get 'bots/show'
+  # get 'bookings/new'
+  # get 'bookings/create'
+  # get 'bots/index'
+  # get 'bots/new'
+  # get 'bots/create'
+  # get 'bots/show'
   devise_for :users
   root to: "pages#home"
   resources :bots, only: [:index, :new, :create, :show] do
