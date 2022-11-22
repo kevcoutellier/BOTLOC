@@ -10,6 +10,8 @@ class BotsController < ApplicationController
 
   def create
     @bot = Bot.new(params_bot)
+    @bot.user = current_user
+
     if @bot.save
       redirect_to bots_path(@bot)
     else
