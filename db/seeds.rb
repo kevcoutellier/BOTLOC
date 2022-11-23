@@ -26,42 +26,42 @@ user8 = User.create!(email: "raphael@gmail.com", password: "password", owner: fa
 
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669128191/macon_asqthg.jpg")
-bot = Bot.new(name: "Teddy", description: "Le beau", price: 5, rating: 5, user: user)
+bot = Bot.new(name: "Maçon", description: "Le beau", price: 5, rating: 5, user: user)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669128191/danceur_alclfo.jpg")
-bot = Bot.new(name: "Diana", description: "La bulgare", price: 10, rating: 5, user: user2)
+bot = Bot.new(name: "Danceur", description: "La bulgare", price: 10, rating: 5, user: user2)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669128191/dog_fkqztz.jpg")
-bot = Bot.new(name: "Kevin", description: "Le magnifique", price: 10, rating: 5, user: user3)
+bot = Bot.new(name: "Dog", description: "Le magnifique", price: 10, rating: 5, user: user3)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669139200/garde_sivupp.jpg")
-bot = Bot.new(name: "Julien", description: "Le plus intelligent", price: 10, rating: 4, user: user4)
+bot = Bot.new(name: "Garde du corps", description: "Le plus intelligent", price: 10, rating: 4, user: user4)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669139200/erica-x_x36vea.webp")
-bot = Bot.new(name: "Morgane", description: "Multi talanteuse", price: 5, rating: 5, user: user5)
+bot = Bot.new(name: "X", description: "Multi talanteuse", price: 5, rating: 5, user: user5)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669139199/medecin_hasegc.jpg")
-bot = Bot.new(name: "Louis", description: "Le geek/gamer", price: 5, rating: 5, user: user6)
+bot = Bot.new(name: "Medecin", description: "Le geek/gamer", price: 5, rating: 5, user: user6)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669139196/petit-copain_vrcd2z.webp")
-bot = Bot.new(name: "Alexia", description: "La douce", price: 5, rating: 5, user: user7)
+bot = Bot.new(name: "Petit Ami", description: "La douce", price: 5, rating: 5, user: user7)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 
 file = URI.open("https://res.cloudinary.com/dygywvyiq/image/upload/v1669129497/development/0aganjwh45ca1bp7kyhnagozv46g.jpg")
-bot = Bot.new(name: "Raphael", description: "Le plus fun", price: 5, rating: 5, user: user8)
+bot = Bot.new(name: "Danceur", description: "Le plus fun", price: 5, rating: 5, user: user8)
 bot.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
 bot.save
 puts 'Seed: Finished seeding!'
