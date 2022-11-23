@@ -1,3 +1,15 @@
-<h1>Bots#show</h1>
-<p>Find me in app/views/bots/show.html.erb</p>
-<%# <%= cl_image_tag @bot.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="bot-banner" style="background-image: url(<%= @bot.photo.key %>);">
+</div>
+
+<div class="container">
+<h1>Your bot</h1>
+<%= @bot.name%>
+<h2>Description</h2>
+<%= @bot.description %>
+<h2>Price</h2>
+<%= @bot.price %>
+<h2>Rating</h2>
+<%= @bot.rating %>
+
+<p><%= link_to "Go back to all bots list", bots_path %></p>
+</div>

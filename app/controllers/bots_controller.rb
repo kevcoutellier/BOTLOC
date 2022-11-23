@@ -1,5 +1,5 @@
 class BotsController < ApplicationController
-  before_action :set_bot, only: [:show]
+  before_action :set_bot, only: %i[ show]
   def index
     @bots = Bot.all
   end
@@ -25,10 +25,10 @@ class BotsController < ApplicationController
   private
 
   def params_bot
-    params.require(:bot).permit(:name, :description, :price, :rating)
+    params.require(:bot).permit(:name, :description, :price, :rating, :photo)
   end
 
   def set_bot
-    @bot = Bot.find(params[:id])
+     @bot = Bot.find(params[:id])
   end
 end

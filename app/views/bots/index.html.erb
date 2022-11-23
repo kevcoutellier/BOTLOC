@@ -12,9 +12,7 @@
   <div class="row">
     <% @bots.each do |bot| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
-      <%= cl_image_tag bot.photo.key, height: 300, width: 400, crop: :fill  %>
-
-
+      <%= cl_image_tag bot.photo.key, height: 300, width: 400, crop: :fill %>
         <%= link_to bot_path(bot), class:"text-decoration-none" do %>
             <%= bot.name %>
           </div>
@@ -23,7 +21,7 @@
     <% end %>
   </div>
 </div>
-<div class="container">
+<%# <div class="container">
   <div class="cards">
     <div class="card">
           <!-- Slider main container -->
@@ -65,4 +63,4 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-</script>
+</script> %>
