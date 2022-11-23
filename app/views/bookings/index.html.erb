@@ -1,3 +1,6 @@
+<h1>Your bookings summary:</h1>
+
+
 
 <%# A styliser %>
 <%= link_to "Add a new bot", new_bot_path, class: "btn btn-flat" %>
@@ -5,7 +8,7 @@
 <%# Container %>
 <div class="container">
   <div class="cards">
-  <% @bots.each do |bot| %>
+  <% @bookings.each do |booking| %>
     <div class="card">
           <!-- Slider main container -->
       <div class="swiper">
