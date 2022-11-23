@@ -1,15 +1,15 @@
-<div class="bot-banner" style="background-image: url(<%= @bot.photo.key %>);">
+<div class="card-trip">
+  <%= cl_image_tag @bot.photo.key %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @bot.name%></h2>
+      <p><%= @bot.description %></p>
+      <p>Rating <%= @bot.rating %></p>
+    </div>
+    <h2 class="card-trip-pricing">$<%= @bot.price %></h2>
+
+  </div>
 </div>
-
 <div class="container">
-<h1>Your bot</h1>
-<%= @bot.name%>
-<h2>Description</h2>
-<%= @bot.description %>
-<h2>Price</h2>
-<%= @bot.price %>
-<h2>Rating</h2>
-<%= @bot.rating %>
-
 <p><%= link_to "Go back to all bots list", bots_path %></p>
 </div>

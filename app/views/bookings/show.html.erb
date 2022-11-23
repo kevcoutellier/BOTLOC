@@ -11,7 +11,7 @@
   <h4><b>Total: $<%= (@booking.end - @booking.start).to_i * @bot.price %></b></h4>
 
   <div class="booking-image"><br>
-    <img src=<%= @booking.bot.photo %> alt="Your Boat photo" width="1000" class="img-responsive">
+    <img src=<%= @booking.bot.photo %> alt="Your Bot photo" width="1000" class="img-responsive">
   </div>
    <%= link_to 'Check all our bots', bots_path%>
 </div>
