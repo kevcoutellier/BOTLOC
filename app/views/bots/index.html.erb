@@ -16,15 +16,9 @@
             <div>
             <%= cl_image_tag bot.photo.key, class:"card__img", crop: :fill %>
             </div>
-              <div>
-              <%= link_to bot_path(bot), class:"" do %>
-              <%= bot.name %>
-              <% end %>
-              </div>
-            <div class="card__info">❤︎</div>
           </div>
-          <div class="swiper-slide">DISPO</div>
-          <div class="swiper-slide">MAP</div>
+          <div class="swiper-slide"><img src="https://c.tenor.com/4gNe9c2RVZIAAAAd/tenor.gif" alt=""></div>
+          <div class="swiper-slide"><img src="https://3.bp.blogspot.com/-70IYUA_5Tr0/Vrt-bRTVzkI/AAAAAAAAl1M/BilhZpEm1XQ/s640/final-physicalmap.gif" alt=""></div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
@@ -33,6 +27,11 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
+        <div>
+        <%= link_to bot_path(bot), class:"card__link" do %>
+        <%= bot.name %>
+        <% end %>
+        </div>
     </div>
   <% end %>
   </div>
