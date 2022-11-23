@@ -1,8 +1,18 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "root", class: "navbar-brand" do %>
-      <%= image_tag "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/2000x1125/9/9/3/512993_shutterstock_715962319converted_920340.png", class: "logo-large", alt: "logo-large" %>
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "https://selea.com/fr/wp-content/uploads/sites/5/2021/05/Bot-Telegram-Selea-2.png", class: "logo-large", alt: "logo-large" %>
     <% end %>
+
+    <%# search bar %>
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group display-search">
+    <input class="form-control string required text-bar" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit"  class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+<% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

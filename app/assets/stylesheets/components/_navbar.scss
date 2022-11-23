@@ -1,13 +1,35 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  // background: #212534
+  justify-content: center;
+  background: whitesmoke ;
+  // background: #212534;
+  box-shadow: 10px;
+  color: light;
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
+}
+
+.display-search{
+  display: flex;
+}
+
+.logo-large{
+  border-radius: px;
+}
+
+.text-bar{
+  height: 40px;
+  width: 600px;
+  background-color: white;
+}
+
+.btn-primary{
+  height: 40px;
+  width: 60px;
 }
