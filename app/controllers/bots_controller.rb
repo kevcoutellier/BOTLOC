@@ -2,6 +2,13 @@ class BotsController < ApplicationController
   before_action :set_bot, only: %i[ show]
   def index
     @bots = Bot.all
+    @markers = @bots.geocoded.map do |bot|
+      {
+        lat: bot.latitude,
+        lng: bot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {bot: bot})
+      }
+    end
   end
 
   def new
@@ -25,7 +32,7 @@ class BotsController < ApplicationController
   private
 
   def params_bot
-    params.require(:bot).permit(:name, :description, :price, :rating, :photo)
+    params.require(:bot).permit(:name, :description, :price, :rating, :photo, :address)
   end
 
   def set_bot
