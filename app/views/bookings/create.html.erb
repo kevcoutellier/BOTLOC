@@ -1,2 +1,4 @@
-<h1>Bookings#create</h1>
-<p>Find me in app/views/bookings/create.html.erb</p>
+<h3>Thanks <%= @booking.user.email %>!</h3>
+<p><%= image_tag "#{@booking.bot.photo}"%>
+<h4>Your booking summary</h4>
+<p>Thank you for booking <b><%= @booking.bot.name %></b>. Your booking has been placed successfully, and is pending for host approval.</p>

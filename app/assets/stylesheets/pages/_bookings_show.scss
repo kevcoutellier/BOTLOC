@@ -1,0 +1,67 @@
+.container-listing {
+  margin: 20px 100px;
+}
+
+.container-listing p {
+  font-size: 15px
+}
+
+.container-listing h3 {
+  color: rgb(110, 111, 111)
+}
+
+// listing pictures size
+.tales {
+  width: 100%;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 650px !important;
+}
+.img-responsive.img-center {
+  margin: 0 auto;
+}
+
+// Listing stying
+@media(max-width: 600px) {
+  .listing-content {
+    display: block !important;
+  }
+}
+
+.listing {
+  padding-right: 70px;
+}
+
+.listing-price {
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+
+.listing-title {
+  border-bottom: solid 1px rgb(190, 189, 186);
+}
+
+.listing-map {
+  margin: 50px 10px;
+}
+
+// Review styling
+
+.review-box {
+  padding-left: 30px
+}
+
+.submit-review {
+  padding-right: 30px;
+  padding-left: 30px;
+  border-bottom: solid 1px rgb(190, 189, 186);
+}
+
+.custom-link a {
+  color: white
+}
