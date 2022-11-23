@@ -1,11 +1,16 @@
 
+
+
+
 <div class="card">
-  Magic Card
+  <%= link_to "PARADISE", bots_path, class: "nav-link" %>
 </div>
 
-<a href="https://mythrillfiction.com/" target="_blank">Mythrill</a>
+<%# <a href="https://mythrillfiction.com/" target="_blank">Mythrill</a> %>
 
 <style>
+
+
 
 @property --rotate {
   syntax: "<angle>";
@@ -21,7 +26,9 @@
 
 body {
   min-height: 100vh;
-  background: #212534;
+  /* background: #212534; */
+  background-image: url("https://get.wallhere.com/photo/white-black-night-robot-shadow-artwork-movies-cyborg-RoboCop-light-color-lighting-darkness-242814.jpg");
+  object-fit: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -32,7 +39,7 @@ body {
 
 
 .card {
-  background: #191c29;
+  background: black;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -103,7 +110,7 @@ body {
 }
 
 a {
-  color: #212534;
+  color: white;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
