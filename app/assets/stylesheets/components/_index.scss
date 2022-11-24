@@ -11,7 +11,7 @@
 @import "show";
 @import "map";
 @import "card-trip";
-
+@import "container";
 @import "logo";
 
 
@@ -21,5 +21,11 @@ body {
 }
 
 a {
-  color: blue;
+  color: rgba(123, 0, 255, 0.426);
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }

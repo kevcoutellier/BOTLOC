@@ -4,7 +4,7 @@
 <%# Container %>
 <div class="container">
   <div class="cards">
-  <% @bots.each do |bot| %>
+    <% @bots.each do |bot| %>
     <div class="card">
           <!-- Slider main container -->
       <div class="swiper">
@@ -17,37 +17,39 @@
             </div>
           </div>
           <div class="swiper-slide"><img src="https://c.tenor.com/4gNe9c2RVZIAAAAd/tenor.gif" alt=""></div>
-          <div class="swiper-slide">
-          <div style="width: 100%; height: 400px;"
-  data-controller="map"
-  data-map-markers-value="<%= [@markers.find{|marker| marker[:bot_id] == bot.id}].to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+            <div class="swiper-slide">
+              <div style="width: 100%; height: 400px;"
+              data-controller="map"
+              data-map-markers-value="<%= [@markers.find{|marker| marker[:bot_id] == bot.id}].to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div>
+            <%= link_to bot_path(bot), class:"card__link" do %>
+            <%= bot.name %>
+            <% end %>
           </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-        <div>
-        <%= link_to bot_path(bot), class:"card__link" do %>
-        <%= bot.name %>
         <% end %>
-        </div>
+      </div>
+      <div id="mapbox"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-  <% end %>
-
   </div>
 </div>
 
 
-<div style="width: 100%; height: 400px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-=======
+
 
 <%# A styliser %>
 <%= link_to "Add a new bot", new_bot_path, class: "btn btn-flat" %>
