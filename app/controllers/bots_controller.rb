@@ -6,7 +6,8 @@ class BotsController < ApplicationController
       {
         lat: bot.latitude,
         lng: bot.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {bot: bot})
+        info_window: render_to_string(partial: "info_window", locals: {bot: bot}),
+        bot_id: bot.id
       }
     end
   end
@@ -27,6 +28,12 @@ class BotsController < ApplicationController
   end
 
   def show
+    @marker =
+      [{
+        lat: @bot.latitude,
+        lng: @bot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {bot: @bot})
+      }]
   end
 
   private
