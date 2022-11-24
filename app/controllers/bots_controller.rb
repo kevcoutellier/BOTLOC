@@ -1,5 +1,5 @@
 class BotsController < ApplicationController
-  before_action :set_bot, only: %i[ show]
+  before_action :set_bot, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:query].present?
@@ -40,6 +40,22 @@ class BotsController < ApplicationController
         lng: @bot.longitude,
         info_window: render_to_string(partial: "info_window", locals: {bot: @bot})
       }]
+  end
+
+  def edit
+  end
+
+  def update
+    if @bot.update(params_bot)
+      redirect_to bots_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @bot.destroy
+    redirect_to bots_path, status: :see_other
   end
 
   private
