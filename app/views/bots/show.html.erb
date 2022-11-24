@@ -1,4 +1,3 @@
-
 <div>
 <div class="show-card">
   <div class="left">
@@ -12,6 +11,7 @@
         </div>
           <h2 class="">$<%= @bot.price %></h2>
       </div>
+      <p><%= @bot.address %></p>
     </div>
 
   </div>
@@ -20,7 +20,16 @@
   <img src="http://urbandan.weebly.com/uploads/2/8/4/4/28444409/308667151.gif" alt="">
   </div>
 </div>
+
       <div>
         <p><%= link_to "Go back to all bots list", bots_path %></p>
       </div>
+
+<div style="width: 100%; height: 400px;"
+  data-controller="map"
+  data-map-markers-value="<%= @marker.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+          </div>
+<div class="container">
+<p><%= link_to "Go back to all bots list", bots_path %></p>
 </div>

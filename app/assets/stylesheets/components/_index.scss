@@ -9,13 +9,16 @@
 @import "swiper";
 @import "banner";
 @import "show";
+@import "map";
 @import "card-trip";
-
-
 @import "logo";
 
 
 
 body {
   background-color: white;
+}
+
+a {
+  color: blue;
 }

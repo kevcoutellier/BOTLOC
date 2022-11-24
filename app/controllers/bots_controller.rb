@@ -1,8 +1,30 @@
 class BotsController < ApplicationController
   before_action :set_bot, only: %i[ show]
+
   def index
-    @bots = Bot.all
+  if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @bots = Bot.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bots = Bot.all
+    end
+     @markers = @bots.geocoded.map do |bot|
+      {
+        lat: bot.latitude,
+        lng: bot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {bot: bot}),
+        bot_id: bot.id
+      }
   end
+
+    # @markers = @bots.geocoded.map do |bot|
+    #   {
+    #     lat: bot.latitude,
+    #     lng: bot.longitude,
+    #     info_window: render_to_string(partial: "info_window", locals: {bot: bot})
+    #   }
+    # end
+
 
   def new
     @bot = Bot.new
@@ -20,15 +42,21 @@ class BotsController < ApplicationController
   end
 
   def show
+    @marker =
+      [{
+        lat: @bot.latitude,
+        lng: @bot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {bot: @bot})
+      }]
   end
 
   private
 
   def params_bot
-    params.require(:bot).permit(:name, :description, :price, :rating, :photo)
+    params.require(:bot).permit(:name, :description, :price, :rating, :photo, :address)
   end
 
   def set_bot
-     @bot = Bot.find(params[:id])
+    @bot = Bot.find(params[:id])
   end
 end
