@@ -8,10 +8,10 @@
 
   <h4><strong><%= @booking.bot.name %></strong></h4>
   <p><%= @booking.bot.description %></p>
-  <h4><b>Total: $<%= (@booking.end - @booking.start).to_i * @bot.price %></b></h4>
+  <h4><b>Total: $<%= (@booking.end - @booking.start).to_i * @booking.bot.price %></b></h4>
 
   <div class="booking-image"><br>
-    <img src= <%= @booking.bot.photo %> alt="Your Bot photo" width="1000" class="img-responsive">
+   <%= cl_image_tag @booking.bot.photo.key, class:"card__img" %>
   </div>
-   <%= link_to 'Check all our bots', bots_path%>
+   <%= link_to 'Check all your bookings', bookings_path%>
 </div>

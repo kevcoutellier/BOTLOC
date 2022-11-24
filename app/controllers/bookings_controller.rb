@@ -11,20 +11,21 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
-    @bot = Bot.find(params[:bot_id])
+
+
   end
 
   def create
     @bot = Bot.find(params[:bot_id])
-
     @booking = Booking.new(booking_params)
     @booking.bot = @bot
     @booking.user = current_user
+
     @booking.status = "pending"
     if @booking.save
-      redirect_to bot_booking_path(@bot, @booking)
-    else
-      render :new
+      redirect_to booking_path(@booking)
+
+
     end
   end
 

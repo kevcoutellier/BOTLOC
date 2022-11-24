@@ -34,6 +34,7 @@ class BotsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @marker =
       [{
         lat: @bot.latitude,

@@ -28,6 +28,11 @@
   <div>
     <p><%= link_to "Go back to all bots list", bots_path %></p>
 </div>
+
+<h1>Book you robot</h1>
+<div>
+<%= render 'form_bookings' %>
+
 <div>
 <%# <% if current_user.owner %>
 <%= link_to "edit", edit_bot_path, class: "btn btn-flat" %>
@@ -38,4 +43,5 @@
 <%= link_to 'delete', bot_path(@bot), data: { turbo_method: :delete, turbo_confirm: "Are you sure ?" }  %>
 <%# <% end %>
 <%= link_to "Back to index", bots_path  %>
+
 </div>
