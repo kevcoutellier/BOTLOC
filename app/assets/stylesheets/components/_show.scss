@@ -1,0 +1,28 @@
+
+.show-card{
+  width: 1000px;
+  height: 650px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-radius: 10px;
+  background-color: rgba($color: #ffffff1a, $alpha: 0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+.left{
+  img{
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.right{
+
+  img{
+    height: 600px;
+    width: 500px;
+    overflow: hidden;
+  }
+}
+}
