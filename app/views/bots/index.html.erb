@@ -1,6 +1,5 @@
 
-<%# A styliser %>
-<%= link_to "Add a new bot", new_bot_path, class: "btn btn-flat" %>
+
 
 <%# Container %>
 <div class="container">
@@ -42,10 +41,18 @@
 
   </div>
 </div>
+
+
 <div style="width: 100%; height: 400px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+=======
+
+<%# A styliser %>
+<%= link_to "Add a new bot", new_bot_path, class: "btn btn-flat" %>
+
+
 
 <script>
 const swiper = new Swiper('.swiper', {
