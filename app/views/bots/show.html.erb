@@ -13,7 +13,7 @@
 </div>
 <div style="width: 100%; height: 400px;"
   data-controller="map"
-  data-map-markers-value="<%= [@marker.find{|marker| marker[:bot_id] == bot.id}].to_json %>"
+  data-map-markers-value="<%= @marker.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
           </div>
 <div class="container">
