@@ -2,27 +2,13 @@
 
 
 
-<div class="card">
+<div class="bad">
   <%= link_to "PARADISE", bots_path, class: "nav-link" %>
 </div>
 
 <%# <a href="https://mythrillfiction.com/" target="_blank">Mythrill</a> %>
 
 <style>
-
-
-
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-:root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
-}
-
 
 body {
   min-height: 100vh;
@@ -38,7 +24,7 @@ body {
 }
 
 
-.card {
+.bad {
   background: black;
   width: var(--card-width);
   height: var(--card-height);
@@ -55,17 +41,17 @@ body {
   font-family: cursive;
 }
 
-.card:hover {
+.bad:hover {
   color: rgb(88 199 250 / 100%);
   transition: color 1s;
 }
-.card:hover:before, .card:hover:after {
+.bad:hover:before, .bad:hover:after {
   animation: none;
   opacity: 0;
 }
 
 
-.card::before {
+.bad::before {
   content: "";
   width: 104%;
   height: 102%;
@@ -80,7 +66,7 @@ body {
     animation: spin 2.5s linear infinite;
 }
 
-.card::after {
+.bad::after {
   position: absolute;
   content: "";
   top: calc(var(--card-height) / 6);
