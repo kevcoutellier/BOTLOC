@@ -9,9 +9,9 @@
 require "open-uri"
 puts 'Seed: Deleting existing records...'
 
+Booking.destroy_all
 Bot.destroy_all
 User.destroy_all
-# Bookings.destroy_all
 
 user = User.create!(email: "kev.coutellier@gmail.com", password: "password", owner: false)
 user2 = User.create!(email: "dianaspieser@gmail.com", password: "password", owner: false)
