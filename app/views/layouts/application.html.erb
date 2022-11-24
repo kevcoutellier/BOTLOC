@@ -31,5 +31,8 @@
       <%= render 'shared/flashes' %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
+    <% unless controller.controller_name == "pages" %>
+      <%= render 'shared/footer' %>
+    <% end %>
   </body>
 </html>

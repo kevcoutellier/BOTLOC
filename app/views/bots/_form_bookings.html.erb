@@ -1,16 +1,9 @@
-
 <div class="container">
   <div class="row">
-
-<%= simple_form_for [@bot, @booking], url: bot_bookings_path, method: :post  do |f| %>
-  <br>
+<%= simple_form_for [@bot, @booking] do |f| %>
   <%= f.input :start, as: :date, required: false, input_html: {id: "range_start" } %>
-  <br>
   <%= f.input :end, as: :date, required: false, input_html: {id: "range_end"} %>
-  <br>
-  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-    <i class="icon-ok icon-white"></i> Book
+ <%= f.submit class: "btn btn-primary"%>
   <% end %>
-<% end %>
 </div>
 </div>

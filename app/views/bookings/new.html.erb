@@ -1,4 +1,10 @@
-<h1>Book you robot</h1>
-<div>
-<%= render 'shared/form_bookings' %>
-</div>
+<h1>Book this Robot</h1>
+<%= render "bots/form_bookings" %>
+
+<h3><strong>Your booking summary</strong></h3><br>
+
+  <strong>Start Date: <%= @booking.start %></strong> | <strong>End Date: <%= @booking.end %></strong>
+
+  <h4><strong><%= @booking.bot.name %></strong></h4>
+  <p><%= @booking.bot.description %></p>
+  <h4><b>Total: $<%= (@booking.end - @booking.start).to_i * @booking.bot.price %></b></h4>
