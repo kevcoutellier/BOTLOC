@@ -13,7 +13,10 @@
           <!-- Slides -->
           <div class="swiper-slide">
             <div>
-            <%= cl_image_tag bot.photo.key, class:"card__img", crop: :fill %>
+            <% if bot.photo.key  %>
+              <%= cl_image_tag bot.photo.key, class:"card__img", crop: :fill %>
+            <% end %>
+              <%#= cl_image_tag bot.photo.key, class:"card__img", crop: :fill %>
             </div>
           </div>
           <div class="swiper-slide"><img src="https://c.tenor.com/4gNe9c2RVZIAAAAd/tenor.gif" alt=""></div>
@@ -48,12 +51,8 @@
   </div>
 </div>
 
-
-
-
 <%# A styliser %>
 <%= link_to "Add a new bot", new_bot_path, class: "btn btn-flat" %>
-
 
 
 <script>
