@@ -1,17 +1,44 @@
+<br>
+<h2 class="text-center"><strong>🚀 Congratulations, your booking has been confirmed! 🚀</strong></h2>
+<br>
+<div class="container">
+  <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Your 🤖BOT-booking summary:</th>
+          </tr>
+        </thead>
+          <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">Name:</th>
+            <td><%= @booking.bot.name %></td>
+        </tr>
+          <tr>
+            <th scope="row">Start Date:</th>
+            <td><%= @booking.start %></td>
+          </tr>
+        <tr>
+            <th scope="row">End Date:</th>
+            <td><%= @booking.end %></td>
+        </tr>
+        <tr>
+            <th scope="row">Description:</th>
+            <td><%= @booking.bot.description %>.Lorem ipsum dolor sit amet. Est dolor quas qui dolores blanditiis id consequatur ratione qui fuga laudantium vel voluptatem sint et impedit impedit. Aut rerum reiciendis est tempora nostrum et beatae quia qui architecto autem in quia consequatur. Et totam suscipit non voluptatem quia et veritatis quam nam harum molestias ut velit rerum qui recusandae earum.</td>
+        </tr>
+        <tr>
+            <th scope="row">Total Price:</th>
+            <td colspan="2">$<%= (@booking.end - @booking.start).to_i * @booking.bot.price %></td>
+        </tr>
+        </tbody>
+    </table>
 
-<div class="container-listing">
-  <br>
-  <h2><strong>Congratulations, your booking has been confirmed!</strong></h2><br>
-  <h3><strong>Your booking summary</strong></h3><br>
+  <%= cl_image_tag @booking.bot.photo.key, class:"img-fluid" %>
 
-  <strong>Start Date: <%= @booking.start %></strong> | <strong>End Date: <%= @booking.end %></strong>
-
-  <h4><strong><%= @booking.bot.name %></strong></h4>
-  <p><%= @booking.bot.description %></p>
-  <h4><b>Total: $<%= (@booking.end - @booking.start).to_i * @booking.bot.price %></b></h4>
-
-  <div class="booking-image"><br>
-   <%= cl_image_tag @booking.bot.photo.key, class:"card__img" %>
+    <div class="text-center">
+    <br>
+  <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Check all your bookings', bookings_path%></button>
+ </div>
   </div>
-   <%= link_to 'Check all your bookings', bookings_path%>
 </div>
