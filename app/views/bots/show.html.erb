@@ -1,4 +1,4 @@
-<div style="padding-top: 40px;">
+<div class="contain", style="padding-top: 40px;">
   <div class="show-card">
     <div class="left">
       <div class="">
@@ -23,6 +23,11 @@
       data-map-markers-value="<%= @marker.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+  </div>
+  <div id="reservation">
+    <h2>Réservation</h2>
+    <%= render 'form_bookings' %>
+  </div>
 </div>
 
   <div>
@@ -31,7 +36,7 @@
 
 <h1>Book you robot</h1>
 <div>
-<%= render 'form_bookings' %>
+
 
 <div>
 <%# <% if current_user.owner %>
