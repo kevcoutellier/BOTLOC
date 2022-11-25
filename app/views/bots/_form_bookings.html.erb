@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
 <%= simple_form_for [@bot, @booking] do |f| %>
-  <%= f.input :start, as: :date, required: false, input_html: {id: "range_start" } %>
-  <%= f.input :end, as: :date, required: false, input_html: {id: "range_end"} %>
- <%= f.submit class: "btn-medium"%>
+  <%= f.input :start, as: :date, required: false, input_html: {id: "range_start" }, label:"Début" %>
+  <%= f.input :end, as: :date, required: false, input_html: {id: "range_end"}, label: "Fin" %>
+ <%= f.submit "Réserver", class: "btn-medium"%>
   <% end %>
 </div>
 </div>
