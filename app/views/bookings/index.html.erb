@@ -1,17 +1,20 @@
-
-
 <div class="container-listing">
-
   <h1>Mes réservations:</h1>
-    <% @bookings.each do |booking| %>
-    <% if booking.user == current_user %>
-    <h2><%= booking.bot.name %>:</h2>
-    <%= booking.bot.description %>
-    <strong>Date de début: <%= booking.start %></strong> | <strong>Date de fin: <%= booking.end %></strong>
-    <h4><b>Total: $<%= (booking.end.to_date - booking.start.to_date).to_i * booking.bot.price %></b></h4>
-  <div class="booking-image">
-    <%= cl_image_tag booking.bot.photo.key, class:"card__img" %>
+  <div class="card-product">
+      <% @bookings.each do |booking| %>
+      <% if booking.user == current_user %>
+    <div class="d-flex card-booking">
+      <%= cl_image_tag booking.bot.photo.key, class:"card__img" %>
+
+    <div class="card-product-info">
+      <h2><%= booking.bot.name %>:</h2>
+      <%= booking.bot.description %>
+      <br>
+      <p><strong>Date de début: <%= booking.start %></strong> | <strong>Date de fin: <%= booking.end %></strong></p>
+      <p><b>Total: $<%= (booking.end.to_date - booking.start.to_date).to_i * booking.bot.price %></b></p>
+    </div>
+    </div>
+    <% end %>
+    <% end %>
   </div>
- <% end %>
- <% end %>
 </div>
