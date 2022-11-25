@@ -33,5 +33,18 @@ border-radius: 100%;
 
 .btn-primary{
   height: 40px;
-  width: 80px;
+  width: 100px;
+  opacity: 1;
+}
+
+.btn-primary:hover{
+  border: #27E7D1 solid 3px;
+}
+
+.nav-link:hover{
+  color: #27E7D1;
+}
+
+.dropdown-item:hover{
+  background-color: #27E7D1;
 }
