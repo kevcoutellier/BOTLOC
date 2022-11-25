@@ -13,7 +13,8 @@ class BotsController < ApplicationController
         lat: bot.latitude,
         lng: bot.longitude,
         info_window: render_to_string(partial: "info_window", locals: {bot: bot}),
-        bot_id: bot.id
+        bot_id: bot.id,
+        image_url: helpers.cloudinary_url(bot.photo.key)
       }
     end
   end
@@ -39,7 +40,8 @@ class BotsController < ApplicationController
       [{
         lat: @bot.latitude,
         lng: @bot.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {bot: @bot})
+        info_window: render_to_string(partial: "info_window", locals: {bot: @bot}),
+        image_url: helpers.cloudinary_url(@bot.photo.key)
       }]
   end
 
