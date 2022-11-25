@@ -4,6 +4,7 @@
 <%# Container %>
 <div class="container">
   <div class="cards">
+    <%if params[:query] == nil%>
     <div class="card">
       <%= link_to "Add a new bot", new_bot_path, class: "add-bot"%>
       <img src="https://images.surfacemag.com/app/uploads/2021/08/23031625/tesla-bot.jpg" alt="" class="card__img card__img--full">
@@ -11,6 +12,8 @@
         <p>AJOUTER UN BOT</p>
       </div>
     </div>
+    <% end %>
+
     <% @bots.each do |bot| %>
     <div class="card">
           <!-- Slider main container -->

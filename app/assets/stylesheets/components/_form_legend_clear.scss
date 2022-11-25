@@ -8,3 +8,14 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.btn-form{
+  width: 150px;
+  background-color: #19EFD4;
+  border-color: #19EFD4;
+  box-shadow: none;
+}
+
+.btn-form:hover{
+  border: #19EFD4 solid 3px;
+}

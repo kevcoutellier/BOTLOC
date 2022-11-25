@@ -1,5 +1,5 @@
 <br>
-<h2 class="text-center"><strong>🚀 Congratulations, your booking has been confirmed! 🚀</strong></h2>
+<h2 class="text-center"><strong>🚀 Votre réservation a été confirmée! 🚀</strong></h2>
 <br>
 <div class="container">
   <div class="row">
@@ -7,28 +7,28 @@
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col">Your 🤖BOT-booking summary:</th>
+            <th scope="col">🤖 Récapitulatif:</th>
           </tr>
         </thead>
           <tbody class="table-group-divider">
           <tr>
-            <th scope="row">Name:</th>
+            <th scope="row">Nom:</th>
             <td><%= @booking.bot.name %></td>
         </tr>
           <tr>
-            <th scope="row">Start Date:</th>
+            <th scope="row">Date de début::</th>
             <td><%= @booking.start %></td>
           </tr>
         <tr>
-            <th scope="row">End Date:</th>
+            <th scope="row">Date de fin:</th>
             <td><%= @booking.end %></td>
         </tr>
         <tr>
             <th scope="row">Description:</th>
-            <td><%= @booking.bot.description %>.Lorem ipsum dolor sit amet. Est dolor quas qui dolores blanditiis id consequatur ratione qui fuga laudantium vel voluptatem sint et impedit impedit. Aut rerum reiciendis est tempora nostrum et beatae quia qui architecto autem in quia consequatur. Et totam suscipit non voluptatem quia et veritatis quam nam harum molestias ut velit rerum qui recusandae earum.</td>
+            <td><%= @booking.bot.description %></td>
         </tr>
         <tr>
-            <th scope="row">Total Price:</th>
+            <th scope="row">Montant total TTC:</th>
             <td colspan="2">$<%= (@booking.end - @booking.start).to_i * @booking.bot.price %></td>
         </tr>
         </tbody>
@@ -38,7 +38,7 @@
 
     <div class="text-center">
     <br>
-  <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Check all your bookings', bookings_path%></button>
+  <button type="button" class="btn btn-secondary btn-lg"><%= link_to 'Mes réservations', bookings_path%></button>
  </div>
   </div>
 </div>
