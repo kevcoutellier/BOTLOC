@@ -1,5 +1,6 @@
 
 <div class="container-listing">
+
 <h1>Mes réservations:</h1>
  <% @bookings.each do |booking| %>
  <% if booking.user == current_user %>
@@ -8,7 +9,8 @@
  <strong>Date de début: <%= booking.start %></strong> | <strong>Date de fin: <%= booking.end %></strong>
  <h4><b>Total: $<%= (booking.end - booking.start).to_i * booking.bot.price %></b></h4>
   <div class="booking-image">
- <%= cl_image_tag booking.bot.photo.key, class:"card__img" %>
+    <%= cl_image_tag booking.bot.photo.key, class:"card__img" %>
   </div>
  <% end %>
- <%end %>
+ <% end %>
+</div>
