@@ -1,52 +1,38 @@
-<div class="contain", style="padding-top: 40px;">
+<div class="contain" style="padding-top: 40px;">
   <div class="show-card">
-    <div class="left">
-      <div class="">
+    <div class="show-card__top">
+      <div class="show-card__img">
         <% if @bot.photo.key  %>
         <%= cl_image_tag @bot.photo.key %>
         <% end  %>
-        <div class="">
-          <div>
-            <h2><%= @bot.name%></h2>
-            <p><%= @bot.address %></p>
-            <p><%= @bot.description %></p>
-            <p>Rating <%= @bot.rating %></p>
-          </div>
-          <div>
-            <h2 class="">$<%= @bot.price %></h2>
+      </div>
+      <div class="show-card__text">
+        <div>
+          <h2><%= @bot.name%></h2>
+          <p><%= @bot.address %></p>
+          <p><%= @bot.description %></p>
+          <p>Rating <%= @bot.rating %></p>
+          <div class="show-card__action">
+            <strong class="">$<%= @bot.price %></strong>
+            <div>
+              <%= link_to "edit", edit_bot_path, class: "btn-medium" %>
+              <%= link_to 'delete', bot_path(@bot), class:"btn-medium", data: { turbo_method: :delete, turbo_confirm: "Are you sure ?" }  %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="right" style="width: 100%; height: 400px;"
+    <div class="show-card__bottom" style="width: 100%; height: 400px;"
       data-controller="map"
       data-map-markers-value="<%= @marker.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-  <div id="reservation">
-    <h2>Réservation</h2>
-    <%= render 'form_bookings' %>
-  </div>
-</div>
-
   <div>
-    <p><%= link_to "Go back to all bots list", bots_path %></p>
-</div>
-
-<h1>Book you robot</h1>
-<div>
-
-
-<div>
-<%# <% if current_user.owner %>
-<%= link_to "edit", edit_bot_path, class: "btn btn-flat" %>
-<%# <% end %>
-</div>
-<div>
-<%# <% if current_user.owner %>
-<%= link_to 'delete', bot_path(@bot), data: { turbo_method: :delete, turbo_confirm: "Are you sure ?" }  %>
-<%# <% end %>
-<%= link_to "Back to index", bots_path  %>
-
+    <div id="reservation">
+      <h2>Réservation</h2>
+      <%= render 'form_bookings' %>
+      <%= link_to "Retour", bots_path, class: "btn-retour" %></div>
+    </div>
+  </div>
 </div>

@@ -17,10 +17,13 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
   }
 
-  // a {
-  //   height: 300px;
-  //   width: 300px;
-  // }
+  a {
+    color: black;
+
+    :hover{
+      opacity: 0.5;
+    }
+  }
 
   h4 {
     margin: 4px;
@@ -54,6 +57,11 @@
     flex-direction: row;
     color: black;
 
+    p{
+      text-align: center;
+      margin-top: 10px;
+      font-size: 20px;
+    }
   }
 }
 .add-bot{
@@ -68,4 +76,18 @@
     a{
       text-decoration: none;
     }
+
+}
+
+#descrip{
+  text-align: center;
+  margin-top: 20px;
+
+  h2{
+    background-color: #F4F4F4;
+  }
+
+  p{
+    margin-top: 20px;
+  }
 }
